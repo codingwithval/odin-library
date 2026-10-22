@@ -28,6 +28,7 @@ body{
 .header-h1{
     font-size: 23px;
     color: #fff;
+    letter-spacing: 4px;
 }
 .header-top{
     display: flex;
@@ -65,7 +66,7 @@ body{
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-    align-items: top;
+    align-items: flex-start;
     grid-area: nav;
     background-color: #070e1f;
     margin: 5px;
@@ -124,10 +125,7 @@ body{
     gap: 20px;
 
 }
-.book-id{
-    font-size: 10px;
-    color: rgb(170, 168, 168);
-}
+
 .book-title{
     font-size: 14px;
     color:#070e1f;
@@ -159,6 +157,7 @@ body{
     position: relative;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
     transition: transform 0.2s;
+    overflow-wrap: anywhere;
 }
 .bookcard:hover{
     transform: translateX(5px);
@@ -175,6 +174,13 @@ body{
     border-radius: 6px;
     font-size: small;
     padding: 4px;
+}
+.inputs{
+    margin-top: 10px; 
+    margin-bottom: 20px;
+}
+.inputs label{
+    margin: 10px;
 }
 .toggle-read{
     background-color: white;
@@ -224,7 +230,7 @@ hr{
 .add-to-list p:hover{
     color: #070e1f;
 }
-.add-to-list p:hover svg path{
+.add-to-list svg:hover path{
     fill: #070e1f;
 }
 
@@ -246,14 +252,15 @@ hr{
     position: relative;
     align-items: center;
     margin-top: 10px;
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .stars{
     display: flex;
     flex-direction: row;
     gap: 5px;
     position: absolute;
-    left: 10px;
+    left: 0px;
 }
 .add-to-list{
     display: flex;
@@ -262,6 +269,43 @@ hr{
     position: absolute;
     right: 20px;
     align-items: center;
+}
+#new-book-form{
+    padding: 25px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: small;
+    color: #666565;
+}
+#new-book-form h3{
+    color: #033270;
+}
+#new-book-form input[type="text"], #new-book-form input[type="number"]{
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 5px;
+}
+#new-book-form input[type="text"]:focus, #new-book-form input[type="number"]:focus{
+    border: 1px solid #033270;
+    outline: none;
+    color: #070e1f;
+}
+.dialog-buttons{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.dialog-buttons button{
+    background-color: #cbe5f1;
+    color: #070e1f;
+    padding: 5px;
+    border-radius: 8px;
+}
+.dialog-buttons button:hover{
+    background-color: #070e1f;
+    color: #cbe5f1;
 }
 .note{
     font-size: small;
@@ -289,7 +333,7 @@ hr{
     fill: #070e1f;
     cursor: pointer;
 }
-.credits, .socials.p {
+.credits, .socials p {
     color: #666565;
     font-size: 9px;
     padding: 10px;
