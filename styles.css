@@ -21,8 +21,8 @@ body{
     flex-direction: column;
     background-color: #070e1f;
     margin: 5px;
-    padding: 20px;
-    gap: 20px;
+    padding: 10px;
+    gap: 10px;
 
 }
 .header-h1{
